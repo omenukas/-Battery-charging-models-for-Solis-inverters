@@ -1,0 +1,12 @@
+type: vertical-stack
+cards:
+  - type: entities
+    entities:
+      - entity: input_boolean.ziemos_rezimas_elektrinei
+        name: Žiemos režimas
+  - type: entities
+    entities:
+      - entity: input_number.akumuliatoriaus_rezervavimas_vasarai
+        name: Rezervas vasarai
+      - entity: input_number.akumuliatoriaus_rezervavimas
+        name: Rezervas žiemai

@@ -1,0 +1,22 @@
+type: vertical-stack
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: entity
+        entity: select.work_mode
+        name: Inverterio režimas
+      - type: entity
+        entity: switch.reserve_battery_mode
+        name: Baterijos rezervavimas
+  - type: horizontal-stack
+    cards:
+      - type: entity
+        entity: number.solis_waveshare_backup_soc
+        name: Nustatytas rezervavimas
+      - type: entity
+        entity: sensor.solis_waveshare_battery_soc
+        name: Baterijos įkrova
+grid_options:
+  columns: full
+  rows: auto
+title: Akumuliatoriaus būsena

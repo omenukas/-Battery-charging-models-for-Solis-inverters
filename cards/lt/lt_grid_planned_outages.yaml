@@ -1,0 +1,10 @@
+type: vertical-stack
+cards:
+  - type: entities
+    title: ESO planiniai darbai
+    entities:
+      - input_text.eso_pavadinimas
+      - input_datetime.eso_pradzia
+      - input_datetime.eso_pabaiga
+      - input_button.eso_sukurti
+title: Akumuliatorių neplaniniai įkrovimai

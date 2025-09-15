@@ -1,0 +1,48 @@
+alias: Žiemos režimo rezervas – Backup SOC ir Reserve Mode
+triggers:
+  - entity_id: input_boolean.ziemos_rezimas_elektrinei
+    trigger: state
+  - entity_id:
+      - input_number.akumuliatoriaus_rezervavimas
+      - input_number.akumuliatoriaus_rezervavimas_vasarai
+    trigger: state
+  - event: start
+    trigger: homeassistant
+conditions:
+  - condition: state
+    entity_id: input_boolean.akumuliatoriu_rankinis_rezervavimas
+    state: "off"
+actions:
+  - choose:
+      - conditions:
+          - condition: state
+            entity_id: input_boolean.ziemos_rezimas_elektrinei
+            state: "on"
+        sequence:
+          - target:
+              entity_id: number.solis_waveshare_backup_soc
+            data:
+              value: >-
+                {{ states('input_number.akumuliatoriaus_rezervavimas') |
+                float(0) }}
+            action: number.set_value
+          - target:
+              entity_id: switch.reserve_battery_mode
+            action: switch.turn_on
+      - conditions:
+          - condition: state
+            entity_id: input_boolean.ziemos_rezimas_elektrinei
+            state: "off"
+        sequence:
+          - target:
+              entity_id: number.solis_waveshare_backup_soc
+            data:
+              value: >-
+                {{ states('input_number.akumuliatoriaus_rezervavimas_vasarai') |
+                float(0) }}
+            action: number.set_value
+          - target:
+              entity_id: switch.reserve_battery_mode
+            action: switch.turn_off
+    default: []
+mode: restart

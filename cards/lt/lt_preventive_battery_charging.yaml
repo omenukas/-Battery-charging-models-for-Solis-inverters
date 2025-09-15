@@ -1,0 +1,13 @@
+type: vertical-stack
+cards:
+  - type: entities
+    entities:
+      - entity: input_number.solis_krovimo2_dienu_intervalas
+        icon: mdi:camera-timer
+        name: Kas kiek dienų įkrauti
+      - entity: input_datetime.solis_krovimo2_laikas
+        name: Pradėti krauti
+    title: Akumuliatorių profilaktinis įkrovimas
+  - type: entity
+    entity: input_datetime.solis_krovimo2_paskutinis_vykdymas
+    name: Paskutinis pilnas įkrovimas
