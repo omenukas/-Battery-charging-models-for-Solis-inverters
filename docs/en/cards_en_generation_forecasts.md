@@ -19,5 +19,5 @@
 
 ## Preview
 
-![preview](../img/generation_forecast.jpg)
+![preview](../img/generation_forecast_EN.jpg)
 
