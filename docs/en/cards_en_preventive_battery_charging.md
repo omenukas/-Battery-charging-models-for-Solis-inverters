@@ -17,5 +17,5 @@
 
 ## Preview
 
-![preview](../img/preventive_charging.jpg)
+![preview](../img/preventive_charging_EN.jpg)
 
