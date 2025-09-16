@@ -18,5 +18,5 @@
 
 ## Preview
 
-![preview](../img/battery_status.jpg)
+![preview](../img/battery_status_EN.jpg)
 
