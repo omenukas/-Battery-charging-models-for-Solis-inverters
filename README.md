@@ -45,7 +45,7 @@ Sukurti naują automatizaciją - Settings->Automations&Scenes->+Create automatio
 Taip pat .yaml turinį galite įdėti tiesiai į `config/automations/` (reikės pakoreguoti skripto sintaksę) ir **perkraukite automatikas**.
 
 ## Automatikų paaiškinimai
-
+**Akumuliatorių įkrovimas nuo saulės – dienos logika**
 
 3. **Kortelės**  
    - Kortelių YAML įkelkite į dashboard’ą (Raw configuration editor) arba įtraukite per `!include`.
