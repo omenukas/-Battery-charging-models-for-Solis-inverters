@@ -36,7 +36,7 @@ helpers/
 ## Kaip naudoti
 1. **Helperiai**
    Automatizacijose ir kortelėse naudojama visa eilė helper tipo subjektų (entity). Todėl pradžioje reikia sukurti visus reikalingus helper'ius. **SVARBU** naudoti tos pačios kalbos automatizacijas, korteles ir helper'ius - Visi komponentai turi būti arba tik angliški arba tik lietuviški.
-   - YAML naudotojams: įtraukite `helpers/lt/helpers_lt.yaml` **arba** `helpers/en/helpers_en.yaml` į `configuration.yaml.
+   - YAML naudotojams: įtraukite `[helpers/lt/helpers_lt.yaml](https://github.com/omenukas/battery-charging-models-for-Solis-inverters/blob/main/helpers/lt/helpers_lt.yaml)` **arba** `helpers/en/helpers_en.yaml` į `configuration.yaml.
    - Jei helperius kūrėte per UI, šiuos failus naudokite kaip pavyzdį pavadinimams/ikonėlėms. Nepamirškite patikrinti ar susikūrė tiksliai toks Entity ID.
 
 3. **Automatikos**  
