@@ -41,7 +41,7 @@ helpers/
 
 > EN versijose `entity_id` pervadinti (pvz., `Solis` → `Solar`, `eso` → `grid`). LT versijose liko originalūs pavadinimai.
 
-Jeigu patiko mano darbas, visada galite tai įvertinti kavos puodeliu:)
+Jeigu patiko mano darbas, visada galite tai įvertinti 
 <a href="https://buymeacoffee.com/omenukas">
   <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="42">
 </a>
