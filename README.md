@@ -47,7 +47,8 @@ Taip pat .yaml turinį galite įdėti tiesiai į `config/automations/` (reikės 
 ## Automatikų paaiškinimai
 **Akumuliatorių įkrovimas nuo saulės – dienos logika**
 
-![forecast](generation_forecast.jpg)
+![Generation forecast](docs/img/generation_forecast.jpg)
+
 3. **Kortelės**  
    - Kortelių YAML įkelkite į dashboard’ą (Raw configuration editor) arba įtraukite per `!include`.
 
