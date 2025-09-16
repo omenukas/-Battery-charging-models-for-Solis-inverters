@@ -1,10 +1,11 @@
 # Home Assistant – Automatikos ir kortelės (LT/EN)
 
 🟡 **Ši versija – lietuvių kalba.**  
+🔵 [English version](README.en.md)
 
 ![dashboard](docs/img/dashboard_overview.jpg)
 
-🔵 [English version](README.en.md)
+
 
 Šiame repozitoriume – Home Assistant **automatizacijos** ir **Lovelace kortelės** dviem kalbomis: **lietuviškai (LT)** ir **angliškai (EN)**. LT yra numatytoji; kiekviename kataloge yra atitikmuo EN.
 
