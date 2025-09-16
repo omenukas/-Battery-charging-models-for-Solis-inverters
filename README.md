@@ -45,7 +45,7 @@ helpers/
 4. **Kortelės**  
    - Kortelių YAML įkelkite į dashboard’ą (Raw configuration editor) arba įtraukite per `!include`.
 
-> EN versijose `entity_id` pervadinti (pvz., `Solis` → `Solar`, `eso` → `grid`). LT versijose liko originalūs pavadinimai.
+
 
 Jeigu patiko mano darbas, visada galite tai įvertinti 
 <a href="https://buymeacoffee.com/omenukas">
