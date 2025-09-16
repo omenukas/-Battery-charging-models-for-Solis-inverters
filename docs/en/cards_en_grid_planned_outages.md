@@ -18,5 +18,5 @@
 
 ## Preview
 
-![preview](../img/grid_planned_outages.jpg)
+![preview](../img/grid_planned_outages_EN.jpg)
 
