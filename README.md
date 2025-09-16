@@ -1,7 +1,9 @@
 # Home Assistant – Automatikos ir kortelės (LT/EN)
+
 <a href="https://buymeacoffee.com/omenukas">
   <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="42">
 </a>
+
 
 
 🟡 **Ši versija – lietuvių kalba.**  
@@ -39,5 +41,7 @@ helpers/
 
 > EN versijose `entity_id` pervadinti (pvz., `Solis` → `Solar`, `eso` → `grid`). LT versijose liko originalūs pavadinimai.
 
-## Licencija
-MIT License – naudokite laisvai, palikite nuorodą į repo.
+Jeigu patiko mano darbas, visada galite tai įvertinti kavos puodeliu:)
+<a href="https://buymeacoffee.com/omenukas">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="42">
+</a>
