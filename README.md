@@ -9,6 +9,11 @@
 🟡 **Ši versija – lietuvių kalba.**  
 🔵 [English version](README.en.md)
 
+## Apžvalga
+
+Šiame repozitoriume pateikiu keletą automatizacijų, kurios galėtų padėti valdyti ir prižiūrėti, kaupiklius, prijungtus prie Jūsų Solis įtampos keitiklio. Galima automatizacijas pritaikyti ir kitų gamintojų įtampos keitikliams, parenkant tinkamus sensorius, tačiau šis projektas paruoštas, naudojant [Solis modbus](https://github.com/Pho3niX90/solis_modbus)
+ integraciją.
+
 ![dashboard](docs/img/dashboard_overview.jpg)
 
 
