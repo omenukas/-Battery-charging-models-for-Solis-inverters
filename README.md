@@ -106,8 +106,9 @@ Mano inverteryje nustatyta taip:
      Charge Current 2 - 20A
      SOC2 - 100%
 
-     Atsisiųsti kortelę - [Akumuliatorių profilaktinio krovimo kortelė](docs/img/preventive_charging.jpg) 
-     Atsisiųsti automatizacijos skriptą - [Akumuliatorių profilaktinio krovimo skriptas](automations/lt/lt_solar_periodic_charging.yaml) 
+Atsisiųsti kortelę - [Akumuliatorių profilaktinio krovimo kortelė](docs/img/preventive_charging.jpg) 
+     
+Atsisiųsti automatizacijos skriptą - [Akumuliatorių profilaktinio krovimo skriptas](automations/lt/lt_solar_periodic_charging.yaml) 
 
 
 Jeigu patiko mano darbas, visada galite tai įvertinti 
