@@ -105,8 +105,9 @@ Mano inverteryje nustatyta taip:
      Charge Time Slot 2 - 00:00-00:00;
      Charge Current 2 - 20A
      SOC2 - 100%
-[Akumuliatorių profilaktinio krovimo kortelė](docs/img/preventive_charging.jpg) 
 
+     Atsisiųsti kortelę - [Akumuliatorių profilaktinio krovimo kortelė](docs/img/preventive_charging.jpg) 
+     Atsisiųsti automatizacijos skriptą - [Akumuliatorių profilaktinio krovimo skriptas](automations/lt/lt_solar_periodic_charging.yaml) 
 
 
 Jeigu patiko mano darbas, visada galite tai įvertinti 
