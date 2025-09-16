@@ -1,10 +1,11 @@
 # Home Assistant – Automations & Cards (EN/LT)
 
 🔵 **This is the English version.**  
+🟡 [Lietuviška versija](README.md)
 
 ![dashboard](docs/img/dashboard_overview.jpg)
 
-🟡 [Lietuviška versija](README.md)
+
 
 This repository contains Home Assistant **automations** and **Lovelace cards** in **English (EN)** and **Lithuanian (LT)**. Lithuanian is the default; each folder has an EN counterpart.
 
