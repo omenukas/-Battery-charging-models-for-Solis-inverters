@@ -46,6 +46,8 @@ Taip pat .yaml turinį galite įdėti tiesiai į `config/automations/` (reikės 
 
 ## Automatikų paaiškinimai
 **Akumuliatorių įkrovimas nuo saulės – dienos logika**
+> [!IMPORTANT]
+> **PASTABA:** ši automatizacija aktuali tiems, kurių saulės elektrinės momentinė generacija viršyja elektros tinklų (ESO) išduotas sąlygas, turi fiksuotus elektros tiekimo planus ir net-metering apskaitos planą. Net-billing, planų pagal biržos kainas ir norint prisidėti prie tinklų balansavimo, reikalingos kitos automatizacijos, prie kurių galimai ateityje irgi prieisiu.
 
 ![Generation forecast](docs/img/generation_forecast.jpg)
 
