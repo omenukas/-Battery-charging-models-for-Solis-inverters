@@ -72,7 +72,7 @@ Kaip tai veikia:
    - Gavus pranešimą iš elektros tinklų, į "ESO planiniai darbai" kortelę įrašome darbu pradžios ir pabaigos datą ir laiką. Paspaudus mygtuką "Sukurti ESO įvykį", kalendoriuje tai dienai sukuriamas įvykis.
    - Automatizacija, vidurnaktį aptikusi, kad tą dieną numatomas elektros atjungimas, pradeda vykdyti tokį scenarijų:
    - inverteryje įjungia `switch.grid_time_of_use_charging_period_1`- įjungia priverstinį baterijų krovimą iš tinklo. Šį TOU inverteryje reikėtų turėti iš anksto pasiruoštą. Jeigu jis jau naudojamas kitur, tai pasirinkti kitą laisvą ir nepamiršti padaryti pataisymus automatizacijose. Kadangi pas mane baterijos aukštos įtampos, tai mano nustatymai tokie:
-     Charge Time Slot 1 - 00:00-06
+     Charge Time Slot 1 - 00:00-06:00;
      Charge Current 1 - 20A
      SOC1 - 100%
      Šiuos nustatymus galima padaryti tiek SolisCloud programėlėje, tiek HA Solis modbus integracijoje.
@@ -87,9 +87,25 @@ Jeigu šis rezervavimas pas jus būna įjungtas, tai jums reikės skripto pabaig
 
 ![Winter mode](docs/img/winter_mode.jpg)
 
-Žiemą, kai nėra elektros gamybos iš saulės, veikia šilumos siurbliai, akumuliatoriai tampa beveik nereikalingi. Tačiau jie vis dar gali atlikti savo pagrindinę funkciją - užtikrinti elektros tiekimą į namus, kai dingsta elektros tiekimas iš tinklų. Todėl 
+Žiemą, kai nėra elektros gamybos iš saulės, veikia šilumos siurbliai, akumuliatoriai tampa beveik nereikalingi. Tačiau jie vis dar gali atlikti savo pagrindinę funkciją - užtikrinti elektros tiekimą į namus, kai dingsta elektros tiekimas iš tinklų.
+Ką daro ši automatizacija:
+   - Kortelėje įjungus `Žiemos režimas`, įjungiamas inverteryje baterijų backup rezervavimas ir nustatomas rezervo SOC toks, kokia reikšmė yra jūsų pačių pasirinkta laukelyje `Rezervas žiemai`. Tai reiškia, kad žiemos režimo metu ir kol yra elektros tiekimas iš tinklų, jūsų inverterio akumuliatoriai niekada neišsikraus žemiau užduotos ribos.
+   - Išjungus žiemos režimą, bus išjungtas baterijų rezervavimas ir baterijų backup rezervas nustatomas į tokią reikšmę, kokia reikšmė yra jūsų pačių pasirinkta laukelyje `Rezervas vasarai`. Taip, žinau, kad ši reikšmė nieko nereiškia, nes išjungiamas backup rezervavimas, tačiau pradžioje, kai kūriau šią automatizaciją galvojau, kad bus naudojama, tačiau dabar kol kas palikau ateičiai, jeigu dar kažką tobulinsiu (o tobulinti manau, kad visada bus ką :))
+   - Ši automatizacija turi dar vieną saugiklį - jos vykdymas nutraukiamas, jeigu įjungiamas `input_boolean.akumuliatoriu_rankinis_rezervavimas`. Šį jungiklį junginėja kitos su akumuliatorių krovimu susijusios automatizacijos, kad įgautų prioritetą.
 
-   - Kortelių YAML įkelkite į dashboard’ą (Raw configuration editor) arba įtraukite per `!include`.
+**Akumuliatorių profilaktinis įkrovimas**
+
+![Preventive charging](docs/img/preventive_charging.jpg)
+
+Kadangi žiemą akumuliatoriai nuo saulės turi mažai šansų įsikrauti iki 100% ir ilgesniam laiko periodui tai turi įtaką pačių baterijų degradacijai, tai ši automatizacija pasirūpina, kad kartais baterijos būtų pilnai ikraunamos.
+Ši automatizacija veikia tik tada, kai yra įjungtas "Žiemos režimas" 
+Kortelėje galite nustatyti profilaktinio įkrovimo periodiškumą ir laiką, kada prasidės priverstinis krovimas iš tinklo.
+Ši automatizacija inverteryje įjungia `switch.grid_time_of_use_charging_period_2`- priverstinį baterijų krovimą iš tinklo. Šį TOU inverteryje reikėtų turėti iš anksto pasiruoštą. Jeigu jis jau naudojamas kitur, tai pasirinkti kitą laisvą ir nepamiršti padaryti pataisymus automatizacijose.
+Mano inverteryje nustatyta taip:
+     Charge Time Slot 2 - 00:00-00:00;
+     Charge Current 2 - 20A
+     SOC2 - 100%
+[Akumuliatorių profilaktinio krovimo kortelė](docs/img/preventive_charging.jpg) 
 
 
 
