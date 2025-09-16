@@ -15,7 +15,7 @@ I use a **Waveshare** Modbus adapter, so my Solis sensor entity IDs follow that 
 
 My Solis dashboard looks like this:
 
-![dashboard](docs/img/dashboard_overview.jpg)
+![dashboard](docs/img/dashboard_overview_EN.jpg)
 
 Home Assistant **automations** and **Lovelace cards** are provided in two languages: **Lithuanian (LT)** and **English (EN)**. LT is the default; every directory has an EN counterpart.
 
@@ -50,7 +50,7 @@ helpers/
 > [!IMPORTANT]
 > **NOTE:** this automation is intended for setups where the PV system’s **instantaneous feed‑in limit** (as defined by your grid operator) can be exceeded, the user is on a **fixed‑rate electricity plan** and uses **net‑metering**. If you have **net‑billing**, **exchange/spot‑price plans**, or want to participate in **grid balancing**, you’ll need different automations (I may add them in the future).
 
-![Generation forecast](docs/img/generation_forecast.jpg)
+![Generation forecast](docs/img/generation_forecast_EN.jpg)
 
 This script requires an additional Home Assistant integration: [Solcast_forecast](https://github.com/david-rapan/ha-solcast).  
 It uses a couple of sensors to evaluate **today’s total generation forecast** and **today’s peak generation**.  
@@ -69,7 +69,7 @@ Download the automation — **[Solar Daytime Charging](automations/en/solar_dayt
 
 **Planned grid outages**
 
-![Grid planned outages](docs/img/grid_planned_outages.jpg)
+![Grid planned outages](docs/img/grid_planned_outages_EN.jpg)
 
 In my area, planned outages are almost always **in the morning**, when the batteries have **discharged overnight** and the PV system has not yet ramped up. When you receive a planned‑outage notice from the grid operator, you can make sure the batteries are **fully charged on that day**.
 
@@ -96,7 +96,7 @@ Download the event‑creation automation — **[Create Grid Event from Card](aut
 
 **Winter Mode**
 
-![Winter mode](docs/img/winter_mode.jpg)
+![Winter mode](docs/img/winter_mode_EN.jpg)
 
 In winter, solar generation is low while heating loads are higher, so batteries are less useful for daily cycling — but they still serve their **backup** role. This automation:
 
@@ -111,7 +111,7 @@ Download the automation — **[Winter Mode Reserve](automations/en/winter_mode_r
 
 **Preventive battery charging**
 
-![Preventive charging](docs/img/preventive_charging.jpg)
+![Preventive charging](docs/img/preventive_charging_EN.jpg)
 
 In winter, batteries rarely reach **100%** from solar alone, which may accelerate **degradation** over long periods. This automation ensures a **periodic full charge**.
 
