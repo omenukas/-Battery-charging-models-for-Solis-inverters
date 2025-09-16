@@ -17,5 +17,5 @@
 
 ## Preview
 
-![preview](../img/winter_mode.jpg)
+![preview](../img/winter_mode_EN.jpg)
 
