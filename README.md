@@ -1,4 +1,4 @@
-# Home Assistant – Automatikos ir kortelės (LT/EN)
+# Home Assistant – Solis baterijų krovimo automatikos ir kortelės (LT/EN)
 
 <a href="https://buymeacoffee.com/omenukas">
   <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="42">
