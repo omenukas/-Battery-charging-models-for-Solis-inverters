@@ -4,7 +4,7 @@
   <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="42">
 </a>
 
-🔵 **This is the English version.**  
+🔵 **This is the English version.**  *Translated from the original Lithuanian description with the help of ChatGPT.*
 🟡 [Lietuviška versija](README.md)
 
 ## Overview
