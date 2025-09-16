@@ -125,8 +125,13 @@ Atsisiųsti kortelę - [Akumuliatorių profilaktinio krovimo kortelė](cards/lt/
      
 Atsisiųsti automatizacijos skriptą - [Akumuliatorių profilaktinio krovimo skriptas](automations/lt/lt_solar_periodic_charging.yaml) 
 
+## Pabaigai
+
+Esu dar jaunas naudotojas hibridinės sistemos, todėl tikrai yra dar ką tobulinti ir galimai ne viską įvertinau. Todėl pastabos, komentarai priimami ir, kiek leis laikas ir galimybės bandysiu tobulinti šias automatizacijas.
+
 
 Jeigu patiko mano darbas, visada galite tai įvertinti 
+
 <a href="https://buymeacoffee.com/omenukas">
   <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="42">
 </a>
