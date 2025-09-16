@@ -1,5 +1,5 @@
 alias: Solar – Periodic Charging
-description: " (žiemą iki 100%)"
+description: " (in winter up to 100%)"
 triggers:
   - at: input_datetime.solar_charge_2_time
     trigger: time
