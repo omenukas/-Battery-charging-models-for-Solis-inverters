@@ -129,6 +129,23 @@ Atsisiųsti automatizacijos skriptą - [Akumuliatorių profilaktinio krovimo skr
 
 Esu dar jaunas naudotojas hibridinės sistemos, todėl tikrai yra dar ką tobulinti ir galimai ne viską įvertinau. Todėl pastabos, komentarai priimami ir, kiek leis laikas ir galimybės bandysiu tobulinti šias automatizacijas.
 
+<div align="center">
+  <a href="https://github.com/omenukas/battery-charging-models-for-Solis-inverters">
+    <img src="https://img.shields.io/badge/GitHub-Peržiūrėti%20repo-181717?logo=github" alt="Peržiūrėti repo GitHub'e">
+  </a>
+  &nbsp;
+  <a href="https://github.com/omenukas/battery-charging-models-for-Solis-inverters/archive/refs/heads/main.zip">
+    <img src="https://img.shields.io/badge/Atsisiųsti-ALL--IN--ONE%20ZIP-2ea44f" alt="Atsisiųsti ZIP">
+  </a>
+</div>
+
+<p align="center">
+  <a href="https://github.com/omenukas/battery-charging-models-for-Solis-inverters"
+     style="display:inline-block;padding:10px 16px;border:1px solid #0366d6;border-radius:6px;text-decoration:none;">
+    Eiti į GitHub repo →
+  </a>
+</p>
+
 
 Jeigu patiko mano darbas, visada galite tai įvertinti 
 
