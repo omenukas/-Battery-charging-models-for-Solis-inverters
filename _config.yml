@@ -8,3 +8,8 @@ baseurl: /battery-charging-models-for-Solis-inverters
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+
+header_pages:
+  - index.md
+
+lang: en
