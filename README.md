@@ -128,6 +128,14 @@ Download the automation — **[Solar – Periodic Charging](automations/en/solar
 
 I’m still a relatively new user of a hybrid PV‑battery system, so there is always room for improvement and I may have missed some edge cases. Feedback and suggestions are welcome, and I’ll keep refining these automations as time permits.
 
+
+
+If you find this useful, you can support my work:
+
+<a href="https://buymeacoffee.com/omenukas">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="42">
+</a>
+
 <div align="center">
   <a href="https://github.com/omenukas/battery-charging-models-for-Solis-inverters">
     <img src="https://img.shields.io/badge/GitHub-View%20repository-181717?logo=github" alt="View repository on GitHub">
@@ -144,9 +152,3 @@ I’m still a relatively new user of a hybrid PV‑battery system, so there is a
     View repository on GitHub →
   </a>
 </p>
-
-If you find this useful, you can support my work:
-
-<a href="https://buymeacoffee.com/omenukas">
-  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="42">
-</a>
