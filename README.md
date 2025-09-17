@@ -9,7 +9,6 @@
 🟡 [Lietuviška versija](https://omenukas.github.io/battery-charging-models-for-Solis-inverters/lt.html) ·
 [Website](https://omenukas.github.io/battery-charging-models-for-Solis-inverters/)
 
-
 ## Overview
 
 This repository contains several automations that help operate and maintain batteries connected to a **Solis** inverter. You can adapt the logic to other inverter brands by selecting the appropriate sensors; however, this project is built around the [Solis modbus](https://github.com/Pho3niX90/solis_modbus) integration.  
