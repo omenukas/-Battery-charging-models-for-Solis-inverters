@@ -4,10 +4,10 @@
   <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="42">
 </a>
 
-🔵 **This is the English version.** [Website](https://omenukas.github.io/battery-charging-models-for-Solis-inverters/)
+🔵 **This is the English version.** 
 
 🟡 [Lietuviška versija](https://omenukas.github.io/battery-charging-models-for-Solis-inverters/lt.html) ·
-
+[Website](https://omenukas.github.io/battery-charging-models-for-Solis-inverters/)
 
 
 ## Overview
