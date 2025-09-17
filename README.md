@@ -6,7 +6,7 @@
 
 🔵 **This is the English version.**  *(Translated from the original Lithuanian description with the help of ChatGPT)*
 
-🟡 [Lietuviška versija](README.md)
+🟡 [Lietuviška versija](README.lt.md)
 
 ## Overview
 
