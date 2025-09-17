@@ -6,7 +6,7 @@
 
 🔵 **This is the English version.** 
 
-🟡 [Lietuviška versija](lt.md)
+🟡 [Lietuviška versija](lt.html)
 
 ## Overview
 
