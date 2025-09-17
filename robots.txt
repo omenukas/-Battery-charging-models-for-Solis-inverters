@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://omenukas.github.io/battery-charging-models-for-Solis-inverters/sitemap.xml
