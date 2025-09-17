@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home Assistant – lietuvių dokumentacija
+title: Home Assistant – Solis akumuliatorių automatika
 ---
 
 {% capture readme_lt %}
