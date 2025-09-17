@@ -132,6 +132,8 @@ I’m still a relatively new user of a hybrid PV‑battery system, so there is a
 
 If you find this useful, you can support my work:
 
+
+
 <a href="https://buymeacoffee.com/omenukas">
   <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="42">
 </a>
