@@ -8,22 +8,6 @@
 
 🟡 [Lietuviška versija](lt.html)
 
-<div align="center">
-  <a href="https://github.com/omenukas/battery-charging-models-for-Solis-inverters">
-    <img src="https://img.shields.io/badge/GitHub-View%20repository-181717?logo=github" alt="View repository on GitHub">
-  </a>
-  &nbsp;
-  <a href="https://github.com/omenukas/battery-charging-models-for-Solis-inverters/archive/refs/heads/main.zip">
-    <img src="https://img.shields.io/badge/Download-ALL--IN--ONE%20ZIP-2ea44f" alt="Download ZIP">
-  </a>
-</div>
-
-<p align="center">
-  <a href="https://github.com/omenukas/battery-charging-models-for-Solis-inverters"
-     style="display:inline-block;padding:10px 16px;border:1px solid #0366d6;border-radius:6px;text-decoration:none;">
-    View repository on GitHub →
-  </a>
-</p>
 
 ## Overview
 
@@ -143,6 +127,23 @@ Download the automation — **[Solar – Periodic Charging](automations/en/solar
 ## Final words
 
 I’m still a relatively new user of a hybrid PV‑battery system, so there is always room for improvement and I may have missed some edge cases. Feedback and suggestions are welcome, and I’ll keep refining these automations as time permits.
+
+<div align="center">
+  <a href="https://github.com/omenukas/battery-charging-models-for-Solis-inverters">
+    <img src="https://img.shields.io/badge/GitHub-View%20repository-181717?logo=github" alt="View repository on GitHub">
+  </a>
+  &nbsp;
+  <a href="https://github.com/omenukas/battery-charging-models-for-Solis-inverters/archive/refs/heads/main.zip">
+    <img src="https://img.shields.io/badge/Download-ALL--IN--ONE%20ZIP-2ea44f" alt="Download ZIP">
+  </a>
+</div>
+
+<p align="center">
+  <a href="https://github.com/omenukas/battery-charging-models-for-Solis-inverters"
+     style="display:inline-block;padding:10px 16px;border:1px solid #0366d6;border-radius:6px;text-decoration:none;">
+    View repository on GitHub →
+  </a>
+</p>
 
 If you find this useful, you can support my work:
 
