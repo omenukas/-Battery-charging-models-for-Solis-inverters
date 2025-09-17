@@ -11,5 +11,6 @@ plugins:
 
 header_pages:
   - index.md
+  - lt.md
 
 lang: en
