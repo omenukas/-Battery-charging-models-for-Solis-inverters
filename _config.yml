@@ -1,0 +1,10 @@
+title: Home Assistant Solis Automations
+description: Automations & Lovelace cards for Solis (Solar) inverter — Modbus, battery reserve, grid planned outages (YAML).
+theme: minima
+
+url: https://omenukas.github.io
+baseurl: /battery-charging-models-for-Solis-inverters
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
