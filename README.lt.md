@@ -7,7 +7,8 @@
 
 
 🟡 **Ši versija – lietuvių kalba.**  
-🔵 [English version](index.html)
+🔵 [English version](https://omenukas.github.io/battery-charging-models-for-Solis-inverters/) ·
+[Svetainė](https://omenukas.github.io/battery-charging-models-for-Solis-inverters/)
 
 ## Apžvalga
 
