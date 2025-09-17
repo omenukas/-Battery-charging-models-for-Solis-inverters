@@ -7,7 +7,7 @@
 
 
 🟡 **Ši versija – lietuvių kalba.**  
-🔵 [English version](README.en.md)
+🔵 [English version](README.md)
 
 ## Apžvalga
 
