@@ -1,16 +1,21 @@
 alias: Akumuliatorių įkrovimas nuo saulės – dienos logika
 triggers:
-  - id: new_day
-    at: "05:00:00"
+  - at: "05:00:00"
+    id: new_day
     trigger: time
+  - id: soc_threshold_reached
+    value_template: |
+      {{ states('sensor.solis_waveshare_battery_soc')|float(0)
+         >= (states('sensor.solis_waveshare_backup_soc')|float(0) + 10) }}
+    trigger: template
   - id: battery_full
     entity_id: sensor.solis_waveshare_battery_soc
     above: 99.9
     for:
       minutes: 1
     trigger: numeric_state
-  - id: time_cutoff
-    at: input_datetime.reakcija_i_laika
+  - at: input_datetime.reakcija_i_laika
+    id: time_cutoff
     trigger: time
 conditions:
   - condition: state
@@ -24,38 +29,58 @@ actions:
         sequence:
           - choose:
               - conditions:
-                  - condition: numeric_state
-                    entity_id: sensor.solcast_pv_forecast_forecast_today
-                    below: input_number.reakcija_i_gamybos_prognoze
+                  - condition: template
+                    value_template: >
+                      {{
+                      states('sensor.solcast_pv_forecast_forecast_today')|float(0)
+                         < states('input_number.reakcija_i_gamybos_prognoze')|float(0) }}
                 sequence:
                   - target:
                       entity_id: switch.feed_in_priority_mode
                     action: switch.turn_off
               - conditions:
-                  - condition: and
-                    conditions:
-                      - condition: numeric_state
-                        entity_id: sensor.solcast_pv_forecast_forecast_today
-                        above: input_number.reakcija_i_gamybos_prognoze
+                  - condition: template
+                    value_template: >
+                      {{
+                      states('sensor.solcast_pv_forecast_forecast_today')|float(0)
+                         > states('input_number.reakcija_i_gamybos_prognoze')|float(0) }}
+                  - condition: template
+                    value_template: >
+                      {{
+                      states('sensor.solcast_pv_forecast_peak_forecast_today')|float(0)
+                         > states('input_number.reakcija_i_dienos_max_generacija')|float(0) }}
+                sequence:
+                  - target:
+                      entity_id: switch.feed_in_priority_mode
+                    action: switch.turn_on
+              - conditions:
+                  - condition: template
+                    value_template: >
+                      {{
+                      states('sensor.solcast_pv_forecast_forecast_today')|float(0)
+                         > states('input_number.reakcija_i_gamybos_prognoze')|float(0) }}
+                  - condition: template
+                    value_template: >
+                      {{
+                      states('sensor.solcast_pv_forecast_peak_forecast_today')|float(0)
+                         < states('input_number.reakcija_i_dienos_max_generacija')|float(0) }}
                 sequence:
                   - choose:
                       - conditions:
-                          - condition: numeric_state
-                            entity_id: sensor.solcast_pv_forecast_peak_forecast_today
-                            below: input_number.reakcija_i_dienos_max_generacija
-                        sequence:
-                          - target:
-                              entity_id: switch.feed_in_priority_mode
-                            action: switch.turn_off
-                      - conditions:
-                          - condition: numeric_state
-                            entity_id: sensor.solcast_pv_forecast_peak_forecast_today
-                            above: input_number.reakcija_i_dienos_max_generacija
+                          - condition: template
+                            value_template: >
+                              {{
+                              states('sensor.solis_waveshare_battery_soc')|float(0)
+                                 >= (states('sensor.solis_waveshare_backup_soc')|float(0) + 10) }}
                         sequence:
                           - target:
                               entity_id: switch.feed_in_priority_mode
                             action: switch.turn_on
-                    default: []
+                    default:
+                      - target:
+                          entity_id: switch.feed_in_priority_mode
+                        action: switch.turn_off
+  - choose:
       - conditions:
           - condition: trigger
             id: battery_full
@@ -63,6 +88,7 @@ actions:
           - target:
               entity_id: switch.feed_in_priority_mode
             action: switch.turn_off
+  - choose:
       - conditions:
           - condition: trigger
             id: time_cutoff
@@ -73,5 +99,31 @@ actions:
           - target:
               entity_id: switch.feed_in_priority_mode
             action: switch.turn_off
-    default: []
+  - choose:
+      - conditions:
+          - condition: trigger
+            id: soc_threshold_reached
+          - condition: template
+            value_template: |
+              {{ states('sensor.solcast_pv_forecast_forecast_today')|float(0)
+                 > states('input_number.reakcija_i_gamybos_prognoze')|float(0) }}
+          - condition: template
+            value_template: >
+              {{
+              states('sensor.solcast_pv_forecast_peak_forecast_today')|float(0)
+                 < states('input_number.reakcija_i_dienos_max_generacija')|float(0) }}
+        sequence:
+          - choose:
+              - conditions:
+                  - condition: time
+                    before: "12:00:00"
+                sequence:
+                  - target:
+                      entity_id: switch.feed_in_priority_mode
+                    action: switch.turn_on
+            default:
+              - target:
+                  entity_id: switch.feed_in_priority_mode
+                action: switch.turn_off
 mode: single
+
