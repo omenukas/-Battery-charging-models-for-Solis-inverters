@@ -5,6 +5,10 @@ input_boolean:
   akumuliatoriu_rankinis_rezervavimas:
     name: Akumuliatorių rankinis rezervavimas
     icon: mdi:shield-battery
+  reserve_battery_mode_before_winter:
+    name: Reserve Battery Mode – išsaugota būsena
+    icon: mdi:battery-lock
+
 input_button:
   eso_sukurti:
     name: Sukurti ESO įvykį
