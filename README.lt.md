@@ -10,7 +10,7 @@
 🔵 [English version](https://omenukas.github.io/battery-charging-models-for-Solis-inverters/) ·
 [Svetainė](https://omenukas.github.io/battery-charging-models-for-Solis-inverters/)
 
-**ATNAUJINTA (2025-09-21)**. Automatizacijose tikrinama ar inverteryje įjungtas baterijų rezervavimas (Battery Reserve) ir skriptų pabaigoje grąžina į bvusią padėtį.
+**ATNAUJINTA (2025-09-21)**. Automatizacijose tikrinama ar inverteryje įjungtas baterijų rezervavimas (Battery Reserve) ir skriptų pabaigoje grąžina į bvusią padėtį. Taip pat pakoreguota kasdieninė baterijų krovimo logika.
 
 ## Apžvalga
 
