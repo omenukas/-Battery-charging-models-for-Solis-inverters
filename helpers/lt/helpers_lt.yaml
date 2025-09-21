@@ -8,6 +8,9 @@ input_boolean:
   reserve_battery_mode_before_winter:
     name: Reserve Battery Mode – išsaugota būsena
     icon: mdi:battery-lock
+  reserve_battery_mode_before_outage:
+    name: Slois Reserve Battery Mode – prieš ESO atjungimą
+    icon: mdi:battery-lock
 
 input_button:
   eso_sukurti:
