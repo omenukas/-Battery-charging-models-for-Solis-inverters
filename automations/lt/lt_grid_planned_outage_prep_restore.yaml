@@ -1,20 +1,20 @@
 alias: ESO planinis atjungimas – pasiruošimas ir atstatymas
 description: ""
 triggers:
-  - id: midnight
-    at: "00:00:30"
+  - at: "00:00:30"
+    id: midnight
     trigger: time
-  - id: ha_start
-    event: start
+  - event: start
+    id: ha_start
     trigger: homeassistant
-  - id: cal_update
-    entity_id: calendar.eso_planiniai_darbai
+  - entity_id: calendar.eso_planiniai_darbai
+    id: cal_update
     trigger: state
 conditions:
   - condition: template
     value_template: "{{ today_has_event }}"
   - condition: template
-    value_template: |-
+    value_template: |
       {{ this.attributes.last_triggered is none
          or as_local(this.attributes.last_triggered).date() != now().date() }}
 actions:
@@ -23,59 +23,82 @@ actions:
         id: ha_start
     then:
       - delay: "00:00:20"
-  - action: switch.turn_on
-    target:
+  - choose:
+      - conditions:
+          - condition: state
+            entity_id: switch.reserve_battery_mode
+            state: "on"
+        sequence:
+          - target:
+              entity_id: input_boolean.reserve_battery_mode_before_outage
+            action: input_boolean.turn_on
+    default:
+      - target:
+          entity_id: input_boolean.reserve_battery_mode_before_outage
+        action: input_boolean.turn_off
+  - target:
       entity_id: switch.grid_time_of_use_charging_period_1
-  - action: input_boolean.turn_on
-    target:
+    action: switch.turn_on
+  - target:
       entity_id: input_boolean.akumuliatoriu_rankinis_rezervavimas
-  - action: switch.turn_on
-    target:
+    action: input_boolean.turn_on
+  - target:
       entity_id: switch.reserve_battery_mode
-  - action: number.set_value
-    target:
+    action: switch.turn_on
+  - target:
       entity_id: number.solis_waveshare_backup_soc
     data:
       value: 100
-  - wait_template: |-
-      {{ (states('sensor.solis_waveshare_battery_soc') | float(0) >= 100)
+    action: number.set_value
+  - wait_template: |
+      {{ (states('sensor.solis_waveshare_battery_soc')|float(0) >= 100)
          or (event_end_ts is not none and now().timestamp() >= event_end_ts) }}
   - if:
       - condition: template
-        value_template: "{{ states('sensor.solis_waveshare_battery_soc') | float(0) >= 100 }}"
+        value_template: "{{ states('sensor.solis_waveshare_battery_soc')|float(0) >= 100 }}"
     then:
-      - action: switch.turn_off
-        target:
+      - target:
           entity_id: switch.grid_time_of_use_charging_period_1
+        action: switch.turn_off
   - wait_template: >-
       {% set a = states('sensor.solis_waveshare_a_phase_voltage')|float(999) %}
       {% set b = states('sensor.solis_waveshare_b_phase_voltage')|float(999) %}
       {% set c = states('sensor.solis_waveshare_c_phase_voltage')|float(999) %}
       {{ (a == 0 or b == 0 or c == 0)
          or (event_end_ts is not none and now().timestamp() >= event_end_ts) }}
-  - action: input_boolean.turn_off
-    target:
+  - target:
       entity_id: input_boolean.akumuliatoriu_rankinis_rezervavimas
-  - action: switch.turn_off
-    target:
-      entity_id: switch.reserve_battery_mode
-  - action: number.set_value
-    target:
+    action: input_boolean.turn_off
+  - choose:
+      - conditions:
+          - condition: state
+            entity_id: input_boolean.reserve_battery_mode_before_outage
+            state: "on"
+        sequence:
+          - target:
+              entity_id: switch.reserve_battery_mode
+            action: switch.turn_on
+    default:
+      - target:
+          entity_id: switch.reserve_battery_mode
+        action: switch.turn_off
+  - target:
       entity_id: number.solis_waveshare_backup_soc
     data:
-      value: "{{ old_backup | float(0) }}"
-  - action: switch.turn_off
-    target:
+      value: "{{ old_backup|float(0) }}"
+    action: number.set_value
+  - target:
       entity_id: switch.grid_time_of_use_charging_period_1
+    action: switch.turn_off
 mode: single
 initial_state: true
 variables:
   event_start_raw: "{{ state_attr('calendar.eso_planiniai_darbai', 'start_time') }}"
   event_end_raw: "{{ state_attr('calendar.eso_planiniai_darbai', 'end_time') }}"
-  today_has_event: |-
+  today_has_event: |
     {{ event_start_raw is not none and
        as_local(as_datetime(event_start_raw)).date() == now().date() }}
-  event_end_ts: >-
+  event_end_ts: >
     {{ as_timestamp(as_local(as_datetime(event_end_raw))) if event_end_raw else
     none }}
-  old_backup: "{{ states('number.solis_waveshare_backup_soc') | float(0) }}"
+  old_backup: "{{ states('number.solis_waveshare_backup_soc')|float(0) }}"
